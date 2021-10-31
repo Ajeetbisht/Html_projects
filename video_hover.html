@@ -34,13 +34,19 @@
 <body>
     <div class="container">
         <div class="box">
-            <video src="lol.mp4" type="video/mp4" loop class="clip"></video>
+            <video src="lol.mp4" type="video/mp4" loop class="clip" id="first"></video>
         </div>
         <div class="box">
-            <video src="loop.mp4" type="video/mp4" loop class="clip"></video>
+            <video src="loop.mp4" type="video/mp4" loop class="clip" id="second"></video>
         </div>
     </div>
     <script>
+        var first = prompt('First video file address & file must be in .mp4', );
+        var second = prompt('First video file address & file must be in .mp4', );
+        
+        document.getElementById('first').src = first;
+        document.getElementById('second').src = second;
+
         const clip = document.querySelectorAll('.clip');
         for(let i=0; i<clip.length; i++){
             clip[i].addEventListener('mouseenter', ()=>{
